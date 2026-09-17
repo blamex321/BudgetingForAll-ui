@@ -1,124 +1,76 @@
-# 🎨 Nutshell Frontend – Your AI-Powered Budgeting App
+# Nutshell — AI-Powered Budgeting App
 
-![Nutshell Logo](https://github.com/blamex321/BudgetingForAll-ui/blob/blamex321-patch-1/screenshots/logo.png)
+Nutshell is a React Native budgeting and expense-tracking application built for DUHacks 4.0. It combines mobile-first UI, Firebase authentication, persistent financial data, and AI-powered budgeting workflows.
 
-**Nutshell** is an **AI-powered budgeting and expense tracking app**, designed with **React Native and Expo** to help users take control of their finances. 
+## Product Flow
 
-🚀 Built for **DUHacks 4.0**  
-🔗 Backend Repo: [BudgetingForAll-backend](https://github.com/blamex321/BudgetingForAll-backend)  
-
-![Hackathon](https://img.shields.io/badge/Hackathon-DUHacks%204.0-purple)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange)
-
----
-
-## **📈 Features**
-✅ **AI-Powered Expense Categorization** using **GPT-4o**  
-✅ **Smart Budgeting & FIRE Planning**  
-✅ **Secure Authentication** with Firebase  
-✅ **Interactive Insights & Graphs**  
-✅ **React Native Bottom Navigation & UI Enhancements**  
-
----
-
-## **🛠️ Tech Stack** 
-| **Category**  | **Technology** |
-|--------------|--------------|
-| 🌐 **Frontend** | React Native, Expo |
-| 📈 **State Management** | Context API |
-| 🔥 **Authentication** | Firebase Auth |
-| 🎨 **UI Components** | React Native Paper, Recharts |
-
----
-
-## **🚀 Setup & Installation**
-### **1️⃣ Clone the Repository**
-```sh
-git clone https://github.com/blamex321/BudgetingForAll-ui.git
-cd BudgetingForAll-ui
+```text
+Sign In / Sign Up
+       │
+       ▼
+Expense Tracking ──► Firebase
+       │
+       ▼
+AI Categorization ──► OpenAI GPT-4o
+       │
+       ▼
+Insights / Advice / FIRE Planning
 ```
 
-### **2️⃣ Install Dependencies**
-```sh
+## Features
+
+- Expense tracking
+- AI-powered expense categorization
+- Budgeting and FIRE planning
+- Financial insights and graphs
+- Firebase authentication
+- React Native bottom navigation
+- API integration with the Nutshell backend
+
+## Tech Stack
+
+**Mobile:** React Native, Expo  
+**State:** Context API  
+**Authentication:** Firebase Auth  
+**Backend:** Node.js, Express  
+**Database:** Firebase Firestore  
+**AI:** OpenAI GPT-4o  
+**UI:** React Native Paper, Recharts
+
+## Screenshots
+
+| Home | Expenses | AI Chat |
+|---|---|---|
+| ![Home](screenshots/home-screen.jpeg) | ![Expenses](screenshots/expenses.jpeg) | ![AI Chat](screenshots/ai-chat.jpeg) |
+
+| FIRE Dashboard | Expense Management |
+|---|---|
+| ![FIRE Dashboard](screenshots/Fire-planner.jpeg) | ![Expense Management](screenshots/add-or-remove.jpeg) |
+
+## API Integration
+
+The mobile application communicates with the backend for expense management and AI workflows.
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/expenses` | Fetch user expenses |
+| POST | `/expenses` | Add an expense |
+| POST | `/ai/categorize` | AI expense categorization |
+| POST | `/ai/advice` | AI financial advice |
+
+## Related Repository
+
+Backend API: [BudgetingForAll-backend](https://github.com/blamex321/BudgetingForAll-backend)
+
+## Getting Started
+
+```bash
 npm install
-```
-
-### **3️⃣ Setup Environment Variables**
-Create a `.env` file inside **`frontend/`** with:
-```
-FIREBASE_API_KEY=your-firebase-api-key
-API_BASE_URL=http://localhost:5001/api  # Update if using deployed backend
-```
-
-### **4️⃣ Run the Application**
-```sh
 npx expo start
 ```
 
----
+Configure the required Firebase and backend environment values before running the application.
 
-## **📲 Screenshots**
-| Home | Expenses | AI Chat |
-|------|---------|--------|
-| ![Home](https://github.com/blamex321/BudgetingForAll-ui/blob/blamex321-patch-1/screenshots/home-screen.jpeg) | ![Expenses](https://github.com/blamex321/BudgetingForAll-ui/blob/blamex321-patch-1/screenshots/expenses.jpeg) | ![AI Chat](https://github.com/blamex321/BudgetingForAll-ui/blob/blamex321-patch-1/screenshots/ai-chat.jpeg) |
+## Team
 
-| FIRE Dashboard | FIRE Insights |
-|---------------|--------------|
-| ![FIRE Dashboard](https://github.com/blamex321/BudgetingForAll-ui/blob/blamex321-patch-1/screenshots/Fire-planner.jpeg) | ![Expense Tracker](https://github.com/blamex321/BudgetingForAll-ui/blob/blamex321-patch-1/screenshots/add-or-remove.jpeg) |
-
----
-
-## **🛠️ API Integration**
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| `GET` | `/expenses` | Fetch user expenses |
-| `POST` | `/expenses` | Add a new expense |
-| `POST` | `/ai/categorize` | AI-based categorization |
-| `POST` | `/ai/advice` | Get AI financial advice |
-
-📀 **Example Request**
-```json
-POST /api/ai/categorize
-{
-  "description": "Uber ride to airport"
-}
-```
-
-📀 **Example Response**
-```json
-{
-  "category": "Transport"
-}
-```
-
----
-
-## **👥 Team**
-- **Laxman Bankupalle** – Frontend Lead 💻  
-- **Sai Prakash** – Full Stack Developer 🤖  
-- **Reethu Bhargavi** – UI/UX Designer 🎨  
-- **Hareesh Beecha** – Backend Specialist 🛠️  
-
-📚 **Hackathon Submission Link**: [TBD]  
-
----
-
-## **🙏 Contributing**
-💪 Want to improve Nutshell?  
-1. **Fork the repo**  
-2. **Create a new branch** (`git checkout -b feature-branch`)  
-3. **Commit changes** (`git commit -m "Added new feature"`)  
-4. **Push to GitHub** (`git push origin feature-branch`)  
-5. **Create a Pull Request** 🎉  
-
----
-
-## **📩 Contact**
-👤 **Laxman Bankupalle**  
-📧 [laxman.bankupalle@gmail.com](mailto:laxman.bankupalle@gmail.com)  
-💼 LinkedIn: [Laxman Bankupalle](https://www.linkedin.com/in/laxman-bankupalle/)  
-
----
-
-🚀 **Made for DUHacks 4.0!** Give us a ⭐ if you like it! 😊🔥
-
+Built as a team project for DUHacks 4.0.
